@@ -18,7 +18,7 @@ Store plugin parameters in a config file
   ```
   sudo apt update
   sudo apt upgrade -y
-  sudo apt install python3 python3-dev python3-venv augeas-devel gcc
+  sudo apt install python3 python3-dev python3-venv libaugeas-dev gcc
   ```
 - Download certbot source and storagegrid plugins
   ```
