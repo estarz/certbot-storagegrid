@@ -1,7 +1,5 @@
 # Certbot Plugin for StorageGRID
 
-## Some text
+## Update management and API certificates from certbot
 
-### Some more text
-
-- body text possibly
+- proof of concept
