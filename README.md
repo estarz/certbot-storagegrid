@@ -2,11 +2,16 @@
 
 ## Update management and API certificates from certbot
 
-- proof of concept
+This is just a proof of concept
+
+## Possible enhancements
+
+Store plugin parameters in a config file 
 
 # Setup in LOD
 - Launch "Getting Started with StorageGRID v2.1"
-- From StorageGRID UI, create admin group with full permissions and a user belonging to that group
+- From StorageGRID UI, create admin group with full permissions and a user belonging to that grou
+  In this POC, a user named "cerbot" with the password "netapp1234" was created
   
 - SSH to host "ansible"
 - Update and install prereqs
