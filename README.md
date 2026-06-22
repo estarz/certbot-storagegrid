@@ -18,6 +18,19 @@
 - Open a 2nd SSH session to host "ansible"
 - Start acme server "source work/certbot/venv/bin/activate; run_acme_server"
 
-- # Update API (S3) certificate
+# Update API (S3) certificate
+For some reason, I can't get certbot_test to work, it will har fail on the TLS warning from the StorageGRID plugin
+
 - in the first SSH session run
-- certbot_test run --no-verify-ssl --http-01-port 5002 --https-port 5001 --config-dir --installer storagegrid --storagegrid-api-url https://192.168.0.80/ --storagegrid-username 'root' --storagegrid-password 'Netapp1!' --storagegrid-cert-type s3 -d s3.demo.netapp.com --storagegrid-no-verify-ssl --standalone
+- certbot --no-verify-ssl --http-01-port 5002 --https-port 5001 \
+  --config-dir /home/stjerna/letsencrypt/certbot/.certbot_test_workspace/conf \
+  --work-dir /home/stjerna/letsencrypt/certbot/.certbot_test_workspace/work \
+  --logs-dir /home/stjerna/letsencrypt/certbot/.certbot_test_workspace/logs \
+  --non-interactive --no-redirect --agree-tos --register-unsafely-without-email \
+  --debug -vv run \
+  --installer storagegrid --storagegrid-api-url https://10.128.16.40/ \
+  --storagegrid-username 'certbot' \
+  --storagegrid-password 'netapp1234' \
+  --storagegrid-cert-type management \
+  -d s3-admin.swelab.local \
+  --standalone --storagegrid-no-verify-ssl --no-random-sleep-on-renew --server https://localhost:14000/dir
