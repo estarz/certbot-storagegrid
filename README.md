@@ -71,7 +71,7 @@ The -storagegrid-cert-type has 2 valid values, "s3" and "management" which will 
   --logs-dir /home/ansible/work/certbot/.certbot_test_workspace/logs \
   --non-interactive --no-redirect --agree-tos --register-unsafely-without-email \
   --debug -vv run \
-  --installer storagegrid --storagegrid-api-url https://10.128.16.40/ \
+  --installer storagegrid --storagegrid-api-url https://192.168.0.80/ \
   --storagegrid-username 'certbot' \
   --storagegrid-password 'netapp1234' \
   --storagegrid-cert-type management \
