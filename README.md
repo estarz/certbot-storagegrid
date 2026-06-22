@@ -14,5 +14,10 @@
 - install storagegrid plugin "pip install -e ../certbot-staorgegrid/"
 - test plugins "certbot_test plugins"
 
-# Update API (S3) certificate
+# Start Pebble ACME server
+- Open a 2nd SSH session to host "ansible"
+- Start acme server "source work/certbot/venv/bin/activate; run_acme_server"
+
+- # Update API (S3) certificate
+- in the first SSH session run
 - certbot_test run --no-verify-ssl --http-01-port 5002 --https-port 5001 --config-dir --installer storagegrid --storagegrid-api-url https://192.168.0.80/ --storagegrid-username 'root' --storagegrid-password 'Netapp1!' --storagegrid-cert-type s3 -d s3.demo.netapp.com --storagegrid-no-verify-ssl --standalone
