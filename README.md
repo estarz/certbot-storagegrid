@@ -77,6 +77,6 @@ The -storagegrid-cert-type has 2 valid values, "s3" and "management" which will 
   --storagegrid-username 'certbot' \
   --storagegrid-password 'netapp1234' \
   --storagegrid-cert-type management \
-  -d s3-admin.swelab.local \
+  -d s3-admin.demo.netapp.com \
   --standalone --storagegrid-no-verify-ssl --no-random-sleep-on-renew --server https://localhost:14000/dir
   ```
