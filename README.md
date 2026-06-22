@@ -48,10 +48,13 @@
   source venv/bin/activate
   run_acme_server
   ```
+If the server stops and you want to restart it, make sure to delete the temp dir, ".certbot_test_workspace", before the restart
+
 
 # Update API (S3) certificate
 For some reason, I can't get certbot_test to work, it will hard fail on the TLS warning from the StorageGRID plugin
-Hance running certbot with all the same options certbot_test adds, in addition to the storagegrid 
+Hence running certbot with all the same options certbot_test adds, in addition to the storagegrid 
+The -storagegrid-no-verify-ssl flag is being honoured, without it there is an error instead of the warning...
 
 - in the first SSH session run
   ```
