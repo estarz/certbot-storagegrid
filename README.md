@@ -61,7 +61,7 @@ For some reason, I can't get certbot_test to work, it will hard fail on the TLS 
 Hence running certbot with all the same options certbot_test adds, in addition to the storagegrid 
 The -storagegrid-no-verify-ssl flag is being honoured, without it there is an error instead of the warning...
 
-`PYTHONWARNINGS="ignore::urllib3.exceptions.InsecureRequestWarning"`
+Tried `PYTHONWARNINGS="ignore::urllib3.exceptions.InsecureRequestWarning" certbot_test ...` but still the warning forced an abrupt exit
 
 The -storagegrid-cert-type has 2 valid values, "s3" and "management" which will update the S3 API certificate and Management interface certificate respectively
 
